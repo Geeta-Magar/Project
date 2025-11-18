@@ -1,63 +1,65 @@
-body{
-    font-family:"Poppins",sans-serif;
+* {
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
-.main{
-    display:flex;
-    flex-direction: column;
 
+body {
+  font-family: "Poppins", sans-serif;
 }
-.header{
-    padding:46px 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.main {
+  display: flex;
+  flex-direction: column;
 }
-ul{
-    display: flex;
-    gap:65px;
-    align-items: center;
-    font-size:22px;
+.header {
+  padding: 46px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-li{
-        list-style-type: none;
+ul {
+  display: flex;
+  gap: 65px;
+  align-items: center;
+  font-size: 22px;
 }
-.nav-button{
-    padding: 7px 13px;
-    transition: 0.2s ease;
-    color:white;
-    background-color: black;
-    border-radius:7px ;
-
+li {
+  list-style-type: none;
 }
-.section-2{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
+.nav-button {
+  padding: 7px 13px;
+  transition: 0.2s ease;
+  /* color:white; */
+  color: var(--color-white);
+  background-color: black;
+  border-radius: 7px;
 }
-.nav-item{
-    list-style: none;
+.section-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-.nav-item a{
-    text-decoration: none;
-    font-weight: 500;
-    color:black;
-    font-family:'Poppins',sans-serif;
+.nav-item {
+  list-style: none;
 }
-.nav-item a:hover{
-    text-decoration:underline;
-    width:103px;
-    height:32px;
+.nav-item a {
+  text-decoration: none;
+  font-weight: 500;
+  /* color:black; */
+  color: var(--color-black);
+  font-family: "Poppins", sans-serif;
 }
-.nav-button a{
-    text-decoration: none;
-    color:white;
-    font-size:24px;
-    height: 62px;
-    width:134px;
-
-
+.nav-item a:hover {
+  text-decoration: underline;
+  width: 103px;
+  height: 32px;
 }
-.nav-button a:hover{
-    text-decoration:underline;
+.nav-button a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 24px;
+  height: 62px;
+  width: 134px;
+}
+.nav-button a:hover {
+  text-decoration: underline;
 }
