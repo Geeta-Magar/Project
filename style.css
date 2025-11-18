@@ -23,13 +23,36 @@ li{
 .nav-button{
     padding: 7px 13px;
     transition: 0.2s ease;
-    background-color:FEFEFE;
+    color:white;
+    background-color: black;
+    border-radius:10px ;
+
 }
 .section-2{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 
+}
+.nav-item{
+    list-style: none;
+}
+.nav-item a{
+    text-decoration: none;
+    font-weight: 500;
+    color:black;
+    font-family:'Poppins',sans-serif;
+}
+.nav-item a:hover{
+    text-decoration:underline;
+}
+.nav-button a{
+    text-decoration: none;
+    color:white;
+
+}
+.nav-button a:hover{
+    text-decoration:underline;
 }
 /* .s2{
     position: ;
