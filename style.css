@@ -63,3 +63,12 @@ li {
 .nav-button a:hover {
   text-decoration: underline;
 }
+.section-2{
+    display:flex;
+    width:1720px;
+    height:852px;
+    background-color:#F4F5F6;
+    position:relative;
+    left:100px;
+    top:227px;
+}
