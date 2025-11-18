@@ -1,0 +1,38 @@
+body{
+    font-family:"Poppins",sans-serif;
+}
+.main{
+    display:flex;
+    flex-direction: column;
+
+}
+.header{
+    padding:46px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    gap:65px;
+    align-items: center;
+}
+li{
+        list-style-type: none;
+}
+.nav-button{
+    padding: 7px 13px;
+    transition: 0.2s ease;
+    background-color:FEFEFE;
+}
+.section-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.s2{
+    position: ;
+    height: 871 ;
+    width: 784;
+}
