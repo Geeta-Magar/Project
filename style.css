@@ -62,52 +62,87 @@ li {
   text-decoration: underline;
 }
 .section-2{
-    align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-between;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 46px 100px;
-    /* position:relative; */
     width:1720px;
     height:852px;
-    background-color:#F4F5F6;
-    /* background-color: blue; */
+    /* background-color:#F4F5F6; */
+    background-color: plum;
     left:100px;
     top:164px;
     border-radius: 59px;
   
-    /* font-family: "Poppins",sans-serif;
-    align-items: center;
-    justify-content: center; */
-
 }
-#image{
-  position: absolute;
-  width: 871px;
-  height: 784px;
-  left: 868px;
-  top: 232px;
-  opacity: 100%;
+.sec2-1{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-evenly;
 }
-.three{
+.sec-main{
   display: flex;
-  width: 221px;
-  background-color: #000000;
-  height: 82px;
-  font-size: 30px;
+  flex-direction: column;
   font-family: "Poppins",sans-serif;
-  line-height: auto;
-  letter-spacing: -5%;
-  color: white;
-  align-items: center;
- padding: 34px;
-
+  width: 100vw;
+  height:100vh;
+  overflow: hidden;
 }
-/* .tilted-container{
+
+.child3{
   font-size: 96px;
   line-height: 120px;
-  width: 474px;
-  height: 473px;
+  font-weight: 900;
   color: black;
   position: relative;
-} */
+  padding-left: 24px;
+  z-index: 1;
+  &::after{
+    content:'';
+    position: absolute;
+    inset: 0;
+    width:500px;
+    height: 120px;
+    background: #EBD96B;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+}
+.child1{
+  font-size: 96px;
+  line-height: 120px;
+  font-weight: 900;
+  color: black;
+  position: relative;
+  padding-left: 24px;
+  z-index: 1;
+  &::after{
+    content:'';
+    position: absolute;
+    inset: 0;
+    width:500px;
+    height: 120px;
+    background:white;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+}
+.child2{
+    font-size: 96px;
+  line-height: 120px;
+  font-weight: 900;
+  color: black;
+  position: relative;
+  padding-left: 24px;
+  z-index: 1;
+}
+.child4{
+  font-size: 96px;
+  line-height: 120px;
+  font-weight: 900;
+  color: black;
+  position: relative;
+  padding-left: 24px;
+  z-index: 1;
+}
+git
