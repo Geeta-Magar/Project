@@ -9,12 +9,15 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+
 }
 .header {
   padding: 46px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width:1718.26px;
+  height:62px ;
 }
 ul {
   display: flex;
@@ -32,11 +35,6 @@ li {
   color: var(--color-white);
   background-color: black;
   border-radius: 7px;
-}
-.section-2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 .nav-item {
   list-style: none;
@@ -64,45 +62,52 @@ li {
   text-decoration: underline;
 }
 .section-2{
+    align-items: flex-start;
+    justify-content: space-evenly;
     display:flex;
+    flex-direction: column;
+    padding: 46px 100px;
     /* position:relative; */
     width:1720px;
     height:852px;
     background-color:#F4F5F6;
+    /* background-color: blue; */
     left:100px;
-    top:227px;
+    top:164px;
     border-radius: 59px;
-}
-#img1{
-  position: absolute;
-  left: 182px;
-  top: 295px;
-  height:112.14px;
-  width:464.74px;
-  background-color: #FFFFFF;
-}
-#img2{
-  position: absolute;
-  left: 193px;
-  top: 528px;
-  height:117.55px;
-  width:495.79px;
-  background-color: #EBD96B;
-}
-#star1{
-  position:absolute;
-  left:849px;
-  right:295px;
-  width: 55.16px;
-  height:50.67px;
-  background-color:#E7E6E6;
+  
+    /* font-family: "Poppins",sans-serif;
+    align-items: center;
+    justify-content: center; */
 
 }
-#star1{
-  position:absolute;
-  left:849px;
-  right:295px;
-  width: 55.16px;
-  height:50.67px;
-  background-color:#E7E6E6;
+#image{
+  position: absolute;
+  width: 871px;
+  height: 784px;
+  left: 868px;
+  top: 232px;
+  opacity: 100%;
+}
+.three{
+  display: flex;
+  width: 221px;
+  background-color: #000000;
+  height: 82px;
+  font-size: 30px;
+  font-family: "Poppins",sans-serif;
+  line-height: auto;
+  letter-spacing: -5%;
+  color: white;
+  align-items: center;
+ padding: 34px;
 
+}
+/* .tilted-container{
+  font-size: 96px;
+  line-height: 120px;
+  width: 474px;
+  height: 473px;
+  color: black;
+  position: relative;
+} */
