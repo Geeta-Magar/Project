@@ -66,12 +66,8 @@ li {
     display:flex;
     flex-direction: row;
     padding: 46px 100px;
-    width:1720px;
-    height:852px;
     /* background-color:#F4F5F6; */
     background-color: plum;
-    left:100px;
-    top:164px;
     border-radius: 59px;
   
 }
@@ -84,8 +80,6 @@ li {
   display: flex;
   flex-direction: column;
   font-family: "Poppins",sans-serif;
-  width: 100vw;
-  height:100vh;
   overflow: hidden;
 }
 
@@ -134,7 +128,6 @@ li {
   color: black;
   position: relative;
   padding-left: 24px;
-  z-index: 1;
 }
 .child4{
   font-size: 96px;
@@ -143,6 +136,28 @@ li {
   color: black;
   position: relative;
   padding-left: 24px;
-  z-index: 1;
 }
-git
+.ch1{
+  font-size: 32px;
+  line-height: auto;
+  color: black;
+
+}
+.ch2 a{
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 30px;
+  height: 82px;
+  width: 221px;
+  background-color: #000000;
+  padding: 24px;
+}
+.sec2-2{
+  display: flex;
+  width: 871px;
+  height: 784px;
+  left: 868px;
+  top: 232px;
+  opacity: 100%;
+} 
+
