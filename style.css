@@ -234,8 +234,12 @@ border-radius: 20px;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  background-color: goldenrod;
+}
+.div2-1{
   width: 666.39px;
   height: 684.76px;
+
 }
 .dd3,
 .dd5{
