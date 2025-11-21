@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FASHIONSITE</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Here are some feedbacks on the html and css you wrote. -->
+    <style>
+      /* ------------------------------------------------------------------------------- */
+      /*
+        Good. Now try to see what other css properties you can write as variables.
+        For example, in this project, you can include font sizes like
+        --font-size-large: 96px;
+
+        Also now try creating classes for repeated styles.
+        For example, you are using display flex in multiple places.
+        You can create a class 
+        .flex { 
+            display: flex; 
+        } 
+        and use that class
+        Now instead of writing 
+        .header{
+            display: flex;
+        }
+            You can do
+            <div class = "header flex"></div>
+            or 
+            <header class = "header flex"></header>
+        This way you don't have to write display flex multiple times for each class and instead include the flex class in the html element.
+.        */
+      * {
+        --color-white: #ffffff;
+        --color-black: #000000;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        --font: "Poppins", sans-serif;
+      }
+
+      /* ------------------------------------------------------------------------------- */
+
+      /* ------------------------------------------------------------------------------- */
+      /* header part one  */
+      /* This is confusing. 
+      head1 is not actuall the header so not ideal to include inside the header. 
+      This section is usually called hero section
+      Header is usually the topmost part of the page which includes logo and navigation menu.
+      Using <header></header> tag is more semantic for that part.
+      instead of using <div class = "header"></div>
+      Using <header></header> is better as it better describes the content inside it also helps in SEO (Search Engine Optimization).
+      */
+
+      .header {
+        padding: 46px 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+      }
+
+      .head1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px;
+        width: 100%;
+        gap: 65px;
+      }
+
+      /* ------------------------------------------------------------------------------- */
+
+      /* ------------------------------------------------------------------------------- */
+      /* Good. Try using flex class and minimize css as much as possible */
+      .menus {
+        display: flex;
+        gap: 65px;
+      }
+
+      /* ------------------------------------------------------------------------------- */
+
+      /* ------------------------------------------------------------------------------- */
+      /* Good. Even better if you give some class to a tag so can diretly target insted of doing .nav item a.
+      Try giving class to a tag like nav-link and target that directly.
+      */
+      .nav-item a {
+        font-family: var(--font);
+        font-size: 22px;
+        line-height: auto;
+        font-weight: 500;
+        color: #242323;
+        text-decoration: none;
+      }
+
+      .nav-item a:hover {
+        text-decoration: underline;
+        width: 103px;
+        /*Dont provide width like this*/
+        height: 32px;
+        /*Dont provide height like this*/
+      }
+
+      /* You checked for width and height in figma and gave the exact values. 
+      This does not cause issues when the elements are small but when you assing such width and height to large elements, 
+      that will mess up your desing on different screen sizes.
+      Instead use padding, proper font sizes and line heights to adjust the size of elements and then use width:max-content if needed.
+      Using max-content will make the element take only the required width based on its content.  
+      */
+      /* ------------------------------------------------------------------------------- */
+
+      /* ------------------------------------------------------------------------------- */
+      .nav-btn {
+        padding: 7px 13px;
+        transition: 0.2s ease;
+        background-color: #000000;
+        /*Use the variable already created*/
+        color: white;
+        /*Use the variable already created*/
+        border-radius: 7px;
+      }
+
+      .nav-btn a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 24px;
+        height: 62px;
+        width: 134px;
+      }
+
+      .nav-btn a:hover {
+        text-decoration: underline;
+      }
+
+      /* Similar issue with height and width */
+      /* ------------------------------------------------------------------------------- */
+
+      /* end of header one */
+      /* header part two start */
+      /* Dont name it head2 also avoid using numbers in class names as much as you can.  */
+      .head2 {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f4f6f5;
+        border-radius: 59px;
+        width: 100%;
+        height: 852px;
+        overflow: hidden;
+      }
+
+      .head2-sec1 {
+        padding-left: 119px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+      }
+
+      .btn2 {
+        transition: 0.2s ease;
+        background-color: hsl(0, 0%, 0%);
+        color: white;
+        padding: 18px;
+        border-radius: 10px;
+      }
+
+      .btn2 a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 30px;
+        width: max-content;
+      }
+
+      .btn2 a:hover {
+        text-decoration: none;
+      }
+
+      .box3 {
+        font-size: 96px;
+        line-height: 120px;
+        font-weight: 900;
+        color: black;
+        position: relative;
+        padding-left: 24px;
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 500px;
+          height: 120px;
+          background: #ebd96b;
+          z-index: -1;
+          transform: rotate(-2deg);
+        }
+      }
+
+      .box1 {
+        font-size: 96px;
+        line-height: 120px;
+        font-weight: 900;
+        color: black;
+        position: relative;
+        padding-left: 24px;
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 500px;
+          height: 120px;
+          background: white;
+          z-index: -1;
+          transform: rotate(-2deg);
+        }
+      }
+
+      /* Good. Giving class like largetext provides more context */
+      .largetext {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-family: var(--font);
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 120px;
+        color: #000000;
+      }
+
+      .box5 {
+        font-family: var(--font);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: auto;
+        color: #191818;
+      }
+
+      .head2-sec2 {
+        width: 871px;
+        height: 784px;
+      }
+
+      /* end of header part2 */
+      /* header part 3 start */
+
+      .logo2 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #ebd96b;
+        height: 186px;
+        padding: 63px;
+      }
+
+      /* end of header part3 */
+      /*START OF NEW ARRIVALS SECTION  */
+      .Newarrivals {
+        display: flex;
+        flex-direction: column;
+        /* background-color: pink; */
+        justify-content: space-evenly;
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 100%;
+        padding: 104px;
+        justify-content: center;
+        align-items: flex-start;
+        /* height: 967px; */
+        /* padding : 104px;
+    margin-top: 69px; */
+      }
+
+      .newarrivals-text {
+        font-family: var(--font);
+        font-size: 48px;
+        font-weight: bold;
+        color: #000000;
+        line-height: 50px;
+        height: 41px;
+        width: 404px;
+        margin-bottom: 80px;
+        margin-left: 104px;
+      }
+
+      .newarrivals-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 808px;
+        gap: 90px;
+      }
+
+      .new-img {
+        width: 490px;
+        height: 805px;
+      }
+
+      #img-id {
+        width: 490px;
+        height: 704px;
+        border-radius: 20px;
+      }
+
+      #new-p1 {
+        font-weight: medium;
+        font-size: 32px;
+        font-family: var(--font);
+        color: #191919;
+      }
+
+      .newarrivals-wrapper a {
+        text-decoration: none;
+      }
+
+      #new-p2 {
+        height: 76px;
+        font-size: 24px;
+        font-family: var(--font);
+        font-weight: medium;
+        color: #7f7f7f;
+      }
+
+      /* paydaysection */
+      .paydaysection {
+        display: flex;
+        width: 100%;
+        /* height: 968px; */
+      }
+
+      .payday-img {
+        width: 100%;
+      }
+
+      .payday-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .payday-text {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 130px 200px 155px 68px;
+        background: linear-gradient(
+          1.32deg,
+          #e0c340 0.13%,
+          #dfc23e 3.97%,
+          #e1c441 7.2%,
+          #e3c743 10.13%,
+          #e4c542 12.98%,
+          #e6c744 15.99%,
+          #e7c845 19.52%,
+          #e5c643 23.96%,
+          #e6c945 30.43%,
+          #e3c743 36.49%,
+          #e9ca48 42.49%,
+          #edce49 49.35%,
+          #f0d44c 55.42%,
+          #f4d84f 61.43%,
+          #f6da52 65.74%,
+          #f7db53 72.23%,
+          #f9dd55 77.43%,
+          #f9df56 83.84%,
+          #fae157 91.52%,
+          #f9df56 97.87%
+        );
+      }
+
+      .boldTextContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .textBoldLargeTilted {
+        position: relative;
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          width: 500px;
+          height: 120px;
+          background: white;
+          z-index: -1;
+          transform: rotate(-2deg);
+        }
+      }
+
+      .textBoldLarge {
+        font-size: 96px;
+        line-height: 120px;
+        font-weight: 900;
+        position: relative;
+        color: black;
+        padding-left: 24px;
+      }
+
+      .textRegularSmall {
+        font-family: "Poppins", sans-serif;
+        font-size: 36.04px;
+        line-height: 53.2px;
+        color: #231300;
+      }
+
+      .textBoldSmall {
+        font-family: "Poppins", sans-serif;
+        font-size: 36.04px;
+        font-family: 400px;
+        line-height: 53.2px;
+        font-weight: bold;
+        color: #000000;
+      }
+
+      .primaryBtn {
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        width: max-content;
+        background-color: #000000;
+        padding: 18px;
+        border-radius: 10px;
+      }
+
+      /* young section */
+      .youngSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 847px;
+        width: 100%;
+      }
+
+      .youngText {
+        font-family: var(--font);
+        font-size: 48px;
+        line-height: 50px;
+        font-weight: bold;
+        color: #000000;
+        height: 50px;
+        width: max-content;
+        margin-left: 100px;
+      }
+
+      .youngImgContainer {
+        display: flex;
+        justify-content: space-evenly;
+        height: 680px;
+        gap: 47px;
+      }
+
+      .youngImg {
+        width: 835px;
+        height: 679px;
+      }
+
+      .youngImgOne {
+        height: 575px;
+        border-radius: 20px;
+      }
+
+      #text1 {
+        font-family: var(--font);
+        font-size: 32px;
+        line-height: 50px;
+        color: #000000;
+        font-weight: medium;
+      }
+
+      #text2 {
+        font-family: var(--font);
+        font-size: 24px;
+        font-weight: medium;
+        line-height: 50px;
+        color: #7f7f7f;
+      }
+
+      /* VOUCHER SECTION */
+      /* .vouchersection{
+  display: flex;
+
+} */
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="head1">
+        <div class="logo"><img src="assets/logo2.jpg" alt="" srcset="" /></div>
+        <div class="menus">
+          <div class="nav-item"><a href="#">CATALOGUE</a></div>
+          <div class="nav-item"><a href="#">FASHION</a></div>
+          <div class="nav-item"><a href="#">FAVOURITE</a></div>
+          <div class="nav-item"><a href="#">LIFESTYLE</a></div>
+          <div class="nav-btn"><a href="#">SIGN UP</a></div>
+        </div>
+      </div>
+      <div class="head2">
+        <div class="head2-sec1">
+          <div class="largetext">
+            <div class="text box1">LET'S</div>
+            <div class="text box2">EXPLORE</div>
+            <div class="text box3">UNIQUE</div>
+            <div class="text box4">CLOTHES.</div>
+          </div>
+          <div class="text box5">
+            Live for Influential and Innovative fashion!
+          </div>
+          <div class="btn2"><a href="">Shop Now</a></div>
+        </div>
+        <div class="head2-sec2">
+          <img src="assets/pic2.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <div class="logo2">
+      <div class="l1">
+        <a href="https://www.hm.com/entrance.ahtml?orguri=%2F"
+          ><img src="assets/b1.png" alt=""
+        /></a>
+      </div>
+      <div class="l1">
+        <a href="https://www.hm.com/entrance.ahtml?orguri=%2F"
+          ><img src="assets/b2.png" alt=""
+        /></a>
+      </div>
+      <div class="l1">
+        <a href="https://www.shopify.com/"
+          ><img src="assets/b3.png" alt=""
+        /></a>
+      </div>
+      <div class="l1">
+        <a href="https://www.lacoste.com/us/"
+          ><img src="assets/b4.png" alt=""
+        /></a>
+      </div>
+      <div class="l1">
+        <a href="https://www.levi.com/US/en_US/"
+          ><img src="assets/b5.png" alt=""
+        /></a>
+      </div>
+      <div class="l1">
+        <a href="https://www.amazon.com/"><img src="assets/b6.png" alt="" /></a>
+      </div>
+    </div>
+    <div class="Newarrivals">
+      <div class="newarrivals-text">NEW ARRIVALS</div>
+      <div class="newarrivals-wrapper">
+        <div class="new-img">
+          <img src="assets/m1.png" alt="" id="img-id" />
+          <div class="new-text">
+            <p id="new-p1">Hoodies&Sweetshirt</p>
+            <p><a href="" id="new-p2">Explore now</a></p>
+          </div>
+        </div>
+        <div class="new-img">
+          <img src="assets/m2.png" alt="" id="img-id" />
+          <div class="new-text">
+            <p id="new-p1">Coats&Parkas</p>
+            <p><a href="" id="new-p2">Explore now</a></p>
+          </div>
+        </div>
+        <div class="new-img">
+          <img src="assets/m3.png" alt="" id="img-id" />
+          <div class="new-text">
+            <p id="new-p1">Tees&T-shirt</p>
+            <p><a href="" id="new-p2">Explore now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="paydaysection">
+      <div class="payday-img">
+        <img src="assets/payDay.png" alt="Pay Day Sale Banner" />
+      </div>
+      <div class="payday-text">
+        <div class="boldTextContainer">
+          <span class="textBoldLarge textBoldLargeTilted">PAYDAY</span>
+          <span class="textBoldLarge">SALE NOW</span>
+        </div>
+        <span class="textRegularSmall"
+          >Spend minimal $100 get 30% off voucher code for your next
+          purchase</span
+        >
+        <span class="textBoldSmall">1 June -10 June 2021</span>
+        <span class="textRegularSmall">*Terms & Condition apply</span>
+        <a href="#" class="primaryBtn">Shop Now</a>
+      </div>
+    </div>
+    <div class="youngSection">
+      <div class="youngText">Young's Favourite</div>
+      <div class="youngImgContainer">
+        <div class="youngImg">
+          <div class="youngImgOne">
+            <img src="assets/youngimg2.png" alt="" />
+          </div>
+          <div class="youngImgText">
+            <span id="text1">Trending on instagram</span><br />
+            <span id="text2">Explore Now</span>
+          </div>
+        </div>
+        <div class="youngImg">
+          <div class="youngImgOne">
+            <img src="assets/youngimg1.png" alt="" />
+          </div>
+          <div class="youngImgText">
+            <span id="text1">All under $40</span><br />
+            <span id="text2">Explore Now</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="vouchersection">
+        <div class="vouchertextsection"></div>
+        <div class="voucherimgsection"></div>
+    </div>
+    <div class="emailsection">
+        <div class="emailLargetext">JOIN SHOPPING COMMUNITY TO</div>
+        <div class="emailLargetext">GET MONTHLY PROMO</div>
+    </div> -->
+  </body>
+</html>
+
+<!-- 
+Overall good.
+Consider using proper class names. Avoid assigning widths and heights.
+Use semantic html tags like <header>, <nav>, <section> etc where applicable.
+When you create utilities, you will end up writing less css and your code will be more maintainable. Also, you wont be writing class names like head1, head2 
+etc which are not descriptive.
+Example. Lets replace your head1
+ .head1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px; /*Dont provide height like this*/
+        width: 100%;
+        gap: 65px;
+}
+        
+Lets create some utiltiies
+  .flex {
+      display: flex;
+  }
+  .justify-between {
+      justify-content: space-between;
+  }
+  .align-center {
+      align-items: center;
+  }
+  .full-width {
+      width: 100%;
+  }
+      .large-gap {
+      gap: 65px;
+  }
+      Now instead of writing
+      <div class = "head1"></div>
+      You can do
+      <div class = "flex justify-between align-center full-width large-gap"></div>
+      But if you need to target this div in future to write some js, you can either give propert class name or id
+      like
+      <div id="hero-section" class = "hero-section flex justify-between align-center full-width large-gap"></div>
+      now you can target #hero-section in css or js.
+      like
+      const heroSection = document.getElementById("hero-section");
+      or
+      const heroSection = document.querySelector(".hero-section");
+-->
